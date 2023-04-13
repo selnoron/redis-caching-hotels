@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Auth</title> 
+    <style> 
+        .card { 
+            width: 200px; 
+            height: 100px; 
+            padding: 30px; 
+            border: 1px solid black; 
+            display: inline-block; 
+            float: left; 
+        } 
+    </style> 
+</head> 
+<body> 
+    {% for hotel in hotels %} 
+        <div class="card"> 
+            <a href="/{{ hotel.id }}"><span>{{ hotel.name }}</span></a> <br> 
+            <span>{{ hotel.price }} rub</span> 
+        </div> 
+    {% endfor %} 
+</body> 
+</html>
